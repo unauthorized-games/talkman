@@ -1,7 +1,9 @@
 #pragma author gmestanley
 #pragma description Rinco Talkman built-in ROM
 
+import nes;
 import std.string;
+import std.core;
 
 namespace MulticartMenu {
 	u8 menuCtrlCode[1152] @ 0x28010;
@@ -9,6 +11,25 @@ namespace MulticartMenu {
 	u8 nmiHandler[233] @ 0x5E69E;
 	u8 irqHandler[22] @ 0x5E8DF;
 }
+
+fn sndLengths() {
+	match(std::core::array_index()) {
+		(0): return 400;
+		(1): return 752;
+		(2): return 880;
+		(3): return 912;
+		(4): return 1376;
+		(5): return 992;
+		(6): return 256;
+		(7): return 1632;
+		(8): return 1744;
+		(9): return 1360;
+		(10): return 992;
+		(11): return 736;
+		(12): return 1024;
+		(13): return 1104;
+	}
+};
 
 namespace Seiya {
 	struct EnglishCharacterNames {
@@ -47,22 +68,13 @@ namespace Seiya {
 		u8 sBottom[16];
 		u8 bBottom[16];
 	};
+	
+	struct SoundEffect {
+		u8 used[sndLengths()];
+		u8 unused[while($<addressof(this)+0x800)];
+	};
 
-	u8 snd1[400] @ 0x10;
-	u8 snd2[752] @ 0x810;
-	u8 snd3[880] @ 0x1010;
-	u8 snd4[912] @ 0x1810;
-	u8 snd5[1376] @ 0x2010;
-	u8 snd6[992] @ 0x2810;
-	u8 snd7[256] @ 0x3010;
-	u8 snd8[1632] @ 0x3810;
-	u8 snd9[1744] @ 0x4010;
-	u8 snd10[1360] @ 0x4810;
-	u8 snd11[992] @ 0x5010;
-	u8 snd12[736] @ 0x5810;
-	u8 snd13[1024] @ 0x6010;
-	u8 snd14[1104] @ 0x6810;
-
+	SoundEffect soundEffects[14] @ 0x10;
 	u8 seiyaSpecialArabic[3696] @ 0x7010;
 	u8 shiryuSpecialArabic[3728] @ 0x8010;
 	u8 sourceCode[368] @ 0x8EA0;
