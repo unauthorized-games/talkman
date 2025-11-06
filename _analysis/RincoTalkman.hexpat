@@ -1,7 +1,6 @@
 #pragma author gmestanley
 #pragma description Rinco Talkman built-in ROM
 
-import nes;
 import std.string;
 import std.core;
 
@@ -136,10 +135,13 @@ namespace Seiya {
 	u8 unknownSubroutineG[47] @ 0x5D903;
 	u8 unknownSubroutineF[22] @ 0x5D94C;
 	u8 unknownSubroutineE[140] @ 0x5D965;
-	u8 unknownSubroutineD[79] @ 0x5D9F3;
+	u8 unknownSubroutineDE[2] @ 0x5D9F1;
+	u8 unknownSubroutineD[93] @ 0x5D9F3;
 	u8 unknownSubroutineC[82] @ 0x5DA50;
+	u8 unknownSubroutineBC[174] @ 0x5DAA2;
 	u8 unknownSubroutineB[25] @ 0x5DB81;
 	u8 unknownSubroutineA[50] @ 0x5DB9A;
+	u8 unknownSubroutine0[119] @ 0x5DBCC;
 	u8 debugSymbolsQuarterCopy[47] @ 0x5DFE1;
 	u8 debugSymbolsQuarterCopy2[77] @ 0x5E513;
 	u8 unknownSubroutine[21] @ 0x5E787;
