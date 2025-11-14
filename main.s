@@ -5,8 +5,9 @@ txs			; Transfer X to stack pointer
 lda #$00	; Load 0 ($00) into Accumulator
 sta $2000	; Store (same as Load but does not affect flags) $2000 into Accumulator
 sta $2001	; Store $2001 into Accumulator
+BRANCH:
 lda $2002	; Load $2002 into Accumulator
-bpl $801d	; Branch to $801D if negative flag clear
+bpl BRANCH	; Branch back to BRANCH if negative flag clear
 ldy #$02
 sty $01
 ldy #$00
