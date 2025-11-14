@@ -8,7 +8,7 @@ sta $2001	; Store Accumulator into $2001
 BRANCH:
 lda $2002	; Load $2002 into Accumulator
 bpl BRANCH	; Branch back to BRANCH if negative flag clear
-ldy #$02	; Load 255 ($FF) into X register
+ldy #$02	; Load 2 ($02) into Y register
 sty $01
 ldy #$00
 tya
