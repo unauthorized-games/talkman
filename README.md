@@ -21,5 +21,5 @@ La ROM viene integrada con trés juegos:
 
 Todos esos trés fueron autorados por Rinco y contenían doblaje como el punto atrativo principal.
 
-El multicart es, de facto, el juego *Os Cavaleiros do Zodíaco*, como el código del menú simplesmente es glued onto los datos de áudio para el tema de fin.
+El multicart es, de facto, el juego *Os Cavaleiros do Zodíaco*, como el código del menú simplesmente es encolado con los datos de áudio para el tema de fin.
 Los otros dos juegos son separados y contenidos junto con el juego de CDZ.
