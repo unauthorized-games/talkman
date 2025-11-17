@@ -5463,11 +5463,11 @@
 
 ;----------------
 ;--------reset--------
-	SEI
-	CLD
-	LDX #$FF
-	TXS
-	LDA #$00
+	SEI					; Set interrupt disable flag
+	CLD					; Clear decimal mode (2A03 does not have it due to MOS patent) flag
+	LDX #$FF			; Load $FF into X
+	TXS					; Transfer X to stack pointer
+	LDA #$00			; Load $00 into accumulator
 	STA PpuMask_2001
 	STA PpuControl_2000
 	STA $8000
@@ -5595,12 +5595,12 @@
 	STA $0088
 	JMP $E62D
 ;--------nmi--------
-	PHP
-	PHA
-	TXA
-	PHA
-	TYA
-	PHA
+	PHP					; Push processor status on stack
+	PHA					; Push accumulator on stack
+	TXA					; Transfer X to accumulator
+	PHA					; Push accumulator on stack
+	TYA					; Transfer Y to accumulator
+	PHA					; Push accumulator on stack
 	LDA #$00
 	STA OamAddr_2003
 	LDA PpuStatus_2002
@@ -5861,12 +5861,12 @@
 
 ;----------------
 ;--------irq--------
-	PHP
-	PHA
-	TXA
-	PHA
-	TYA
-	PHA
+	PHP					; Push processor status on stack
+	PHA					; Push accumulator on stack
+	TXA					; Transfer X to accumulator
+	PHA					; Push accumulator on stack
+	TYA					; Transfer Y to accumulator
+	PHA					; Push accumulator on stack
 	JSR $0423
 	LDA $0087
 	STA $8000
