@@ -5680,7 +5680,7 @@
 	STX $8001
 	LDA #$85
 	STA $8000
-	INX
+	INX					; Increment X
 	STX $8001
 	JSR $E81D
 	LDA $0088
@@ -5690,13 +5690,13 @@
 	STA $0082
 	LDA $0087
 	STA $8000
-	PLA
-	TAY
-	PLA
-	TAX
-	PLA
-	PLP
-	RTI
+	PLA					; Pull accumulator from stack
+	TAY					; Transfer accumulator to Y
+	PLA					; Pull accumulator from stack
+	TAX					; Transfer accumulator to X
+	PLA					; Pull accumulator from stack
+	PLP					; Pull processor status from stack
+	RTI					; Return from interrupt
 ;------------------------
 ;--------sub start-------
 	ASL A
@@ -5868,15 +5868,15 @@
 	TYA			; Transfer Y to accumulator
 	PHA			; Push accumulator on stack
 	JSR $0423
-	LDA $0087
-	STA $8000
-	PLA
-	TAY
-	PLA
-	TAX
-	PLA
-	PLP
-	RTI
+	LDA $0087	; Load $87 into A
+	STA $8000	; Store $8000 into accumulator
+	PLA			; Pull accumulator from stack
+	TAY			; Transfer accumulator to Y
+	PLA			; Pull accumulator from stack
+	TAX			; Transfer accumulator to X
+	PLA			; Pull accumulator from stack
+	PLP			; Pull processor status from stack
+	RTI			; Return from interrupt
 ;------------------------
 ;---unidentified block---
 

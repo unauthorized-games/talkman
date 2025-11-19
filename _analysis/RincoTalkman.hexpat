@@ -1,7 +1,7 @@
 #pragma author gmestanley
 #pragma description Rinco Talkman built-in ROM
 
-import std.string;
+import nes;
 import std.core;
 
 namespace MulticartMenu {
@@ -78,8 +78,8 @@ namespace Seiya {
     u8 sourceCode[368] @ 0x8EA0;
     u8 hyogaSpecialArabic[3318] @ 0x9010;
     u8 sndSourceCode[778] @ 0x9D06;
-    u8 afroditeSpecialArabic[3347] @ 0xA010;
-    u8 colorSourceCode[752] @ 0xAD20;
+    u8 afroditeSpecialArabic[3346] @ 0xA010;
+    u8 colorSourceCode[750] @ 0xAD22;
     u8 berengueSpecialArabic[3326] @ 0xB010;
     u8 titleSourceCode[770] @ 0xBD0E;
     u8 atlasSpecialArabic[3246] @ 0xC010;
@@ -202,7 +202,16 @@ namespace Seiya {
     u8 englishCharacterNames[140] @ 0x7F6B2;
     u8 arabicCharacterNames[191] @ 0x7F748;
     u8 streetFighterDisclaimer[34] @ 0x7F80C;
-    u8 seiyaDescription[47216] @ 0x7FFE0;
+    u8 unknownSubroutineAlpha[21] @ 0x7FFE0;
+
+    struct Vectors {
+        u16 nmi;
+        u16 resetVector [[comment("Entry Point")]];
+        u16 externalIRQ;
+    };
+
+    Vectors vectors @ 0x8000A;
+    u8 seiyaDescription[47168] @ 0x80010;
     u8 shiryuDescription[43296] @ 0x8B860;
     u8 hyogaDescription[] @ 0x96180;
 
@@ -233,6 +242,7 @@ namespace Seiya {
     u8 zodiacSignIcons[576] @ 0x30EAD0;
     u8 rest[832] @ 0x30ED10;
     u8 gameplayOpponentNameAlphabet[416] @ 0x30F050;
+    u8 debugFont[4096] @ 0x323E10;
     u8 copyrightTilemap[512] @ 0x3315B0;
     u8 rincoLogo[896] @ 0x3317B0;
     u8 victoryCounts[32] @ 0x3334F0;
@@ -245,10 +255,13 @@ namespace Seiya {
     u8 borderBottom[48] @ 0x333780;
     u8 englishTop[48] @ 0x3337B0;
     u8 englishBottom[144] @ 0x333830;
+    u8 hyogaSpecialCHR[4096] @ 0x33B010;
     u8 portraitsSeiyaShiryu[4096] @ 0x33D010;
+    u8 seiyaSpecialCHR[8192] @ 0x33E010;
+    u8 debugFont2[4096] @ 0x35DE10;
 }
 
-/*struct DebugSymbol {
+struct DebugSymbol {
     u8 unknown[10];
     std::string::SizedString<u8> symbol;
-};DebugSymbol debugSymbols[while($<0xD010)] @ 0xCCBE;DebugSymbol debugSymbols2[while($<0xE796)] @ 0xDC70;*/
+};//DebugSymbol debugSymbols[while($<0xD010)] @ 0xCCBE;DebugSymbol debugSymbols2[while($<0xE796)] @ 0xDC70;
