@@ -174,7 +174,7 @@ namespace CDZ {
     u8 arabicUnknown[124] @ 0x75714;
     u8 seiyaDescription[47168] @ 0x80010;
     u8 shiryuDescription[43296] @ 0x8B860;
-    u8 hyogaDescription[] @ 0x96180;
+    u8 hyogaDescription[37007] @ 0x96180;
 
 
     u8 introOpeningCutscene[6144] @ 0x300010;
