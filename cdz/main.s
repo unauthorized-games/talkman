@@ -6635,8 +6635,12 @@
 	BNE $FC03
 	RTS
 ;------------------------
-;---unidentified block---
-
+	LDA $2A
+	AND #$30
+	EOR #$30
+	BNE $FC54
+	JMP $8000
+	RTS
 ;------------------------
 	LDA $0056
 	BEQ $FC57
