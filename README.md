@@ -13,7 +13,7 @@ The other two games are separate and bundled together with the CDZ game.
 
 PORTUGUÊS:
 Esse repositório é para desmontar a ROM integrada do Rinco Talkman, um famiclone de 1997 capaz de produzir samples de áudio de maior qualidade que o 2A03 (processador de código e áudio) do NES pode aguentar.
-Mais informações [aquí](https://www.nesdev.org/wiki/NES_2.0_Mapper_594) (em inglês).
+Mais informações [aqui](https://www.nesdev.org/wiki/NES_2.0_Mapper_594) (em inglês).
 
 A ROM vem com três jogos:
 * *Os Cavaleiros do Zodíaco*: Nunca-antes-visto jogo de luta por Hummer Team do mesmo ano baseado na franquia de mesmo nome
