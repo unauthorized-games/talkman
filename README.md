@@ -8,7 +8,7 @@ The ROM comes bundled with three games:
 
 All three of these were authored by Rinco and featured voice acting as the main attractive point.
 
-The multicart is, in fact, the *Os Cavaleiros do Zodíaco* game, as the menu's code is simply glued onto the audio data for the ending theme.
+The game compilation is, in fact, the *Os Cavaleiros do Zodíaco* game, as the menu's code is simply glued onto the audio data for the ending theme.
 The other two games are separate and bundled together with the CDZ game.
 
 PORTUGUÊS:<br>
@@ -20,7 +20,7 @@ A ROM vem com três jogos:
 * *The Dragon*: Versão amplificada de 1996 de um jogo de 1995 por um time de desenvolvedores Ex-Sachen
 * *Captain Bassam*: Nova hack de tradução para árabe de Captain Tsubasa Vol. II
 
-O multicartucho é, de fato, o jogo *Os Cavaleiros do Zodíaco*, como o código do menu é simplesmente colado com os dados musicais para o tema do final.
+A compilação de jogos é, de fato, o jogo *Os Cavaleiros do Zodíaco*, como o código do menu é simplesmente colado com os dados musicais para o tema do final.
 Os outros dois jogos são separados e contidos junto com o jogo de CDZ.
 
 ESPAÑOL:<br>
@@ -33,5 +33,5 @@ La ROM viene con trés juegos:
 
 Todos esos trés fueron autorados por Rinco y contenían doblaje como el punto atrativo principal.
 
-El multicart es, de facto, el juego *Os Cavaleiros do Zodíaco*, como el código del menú simplesmente es encolado con los datos musicales para el tema de fin.
+La compilación de juegos es, de facto, el juego *Os Cavaleiros do Zodíaco*, como el código del menú simplesmente es encolado con los datos musicales para el tema de fin.
 Los otros dos juegos son separados y contenidos junto con el juego de CDZ.
