@@ -29,7 +29,7 @@ fn sndLengths() {
 	} else return 3696;
 };
 
-namespace CDZ {	
+namespace CDZ {
 	struct SoundEffect {
 		u8 used[sndLengths()];
 		u8 unused[while($<addressof(this)+0x800*($ < 0x7000)+0x1000*($ > 0x7000))];
