@@ -25,10 +25,8 @@ iny				            ; Increment Y register
 bne RAMACCSTORE             ; Branch to RAMACCSTORE if not equal
 dec $01			            ; Decrement CPURAM $0001
 bpl RAMACCSTORE             ; Branch to RAMACCSTORE if positive (negative flag clear)
-; A=00 P=?? X=FF Y=01 SP=FF
 lda #$00		            ; Load 0 ($00) into Accumulator
 sta $10			            ; Store Accumulator into $0010
-; A=00 P=?? X=FF Y=01 SP=FF
 lda #$00		            ; Load 0 ($00) into Accumulator
 sta $8000		            ; Store Accumulator into $8000
 lda #$1a		            ; Load 26 ($1A) into Accumulator
