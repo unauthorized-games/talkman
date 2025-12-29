@@ -1,27 +1,27 @@
 sei				            ; Set interrupt disable flag
 cld				            ; Clear decimal mode (2A03 does not have it due to MOS patent) flag
 ldx #$FF		            ; Load 255 ($FF) into X register
-; A=?? P=?? X=FF Y=?? SP=??
+; A=?? X=FF Y=?? SP=??
 txs				            ; Transfer X to stack pointer
-; A=?? P=?? X=FF Y=?? SP=FF
+; A=?? X=FF Y=?? SP=FF
 lda #$00		            ; Load 0 ($00) into Accumulator
-; A=00 P=?? X=FF Y=?? SP=FF
+; A=00 X=FF Y=?? SP=FF
 sta $2000		            ; Store Accumulator (same as Load but doesn't set flags) into $2000
 sta $2001		            ; Store Accumulator into $2001
 BRANCH:
 lda $2002		            ; Load Accumulator into $2002
 bpl BRANCH		            ; Branch back to BRANCH if negative flag clear
 ldy #$02		            ; Load 2 ($02) into Y register
-; A=00 P=?? X=FF Y=02 SP=FF
+; A=00 X=FF Y=02 SP=FF
 sty $01			            ; Store Y register into $01
 ldy #$00		            ; Load 0 ($00) into Y register
-; A=00 P=?? X=FF Y=00 SP=FF
+; A=00 X=FF Y=00 SP=FF
 tya				            ; Transfer Y register to Accumulator
-; A=00 P=?? X=FF Y=00 SP=FF
+; A=00 X=FF Y=00 SP=FF
 RAMACCSTORE:
 sta ($00), y	            ; Store accumulator into CPURAM $0000
 iny				            ; Increment Y register
-; A=00 P=?? X=FF Y=01 SP=FF
+; A=00 X=FF Y=01 SP=FF
 bne RAMACCSTORE             ; Branch to RAMACCSTORE if not equal
 dec $01			            ; Decrement CPURAM $0001
 bpl RAMACCSTORE             ; Branch to RAMACCSTORE if positive (negative flag clear)
