@@ -17,32 +17,43 @@ sty $01			            ; Store Y register into $01
 ldy #$00		            ; Load 0 ($00) into Y register
 ; A=00 X=FF Y=00 SP=FF
 tya				            ; Transfer Y register to Accumulator
-; A=00 X=FF Y=00 SP=FF
+; A=00 X=FF Y=00 SP=FF		; (useless instruction)
 RAMACCSTORE:
-sta ($00), y	            ; Store accumulator into CPURAM $0000
+sta ($00), y	            ; Store accumulator indirectly into CPURAM $0000, using Y ($00) and operand ($00)
 iny				            ; Increment Y register
 ; A=00 X=FF Y=01 SP=FF
 bne RAMACCSTORE             ; Branch to RAMACCSTORE if not equal
 dec $01			            ; Decrement CPURAM $0001
+; A=00 X=FF Y=01 SP=FF $0001=FF
 bpl RAMACCSTORE             ; Branch to RAMACCSTORE if positive (negative flag clear)
 lda #$00		            ; Load 0 ($00) into Accumulator
+; A=00 X=FF Y=01 SP=FF
 sta $10			            ; Store Accumulator into $0010
 lda #$00		            ; Load 0 ($00) into Accumulator
+; A=00 X=FF Y=01 SP=FF
 sta $8000		            ; Store Accumulator into $8000
 lda #$1a		            ; Load 26 ($1A) into Accumulator
+; A=1A X=FF Y=01 SP=FF
 sta $8001		            ; Store Accumulator into $8001
 lda #$20		            ; Load 32 ($20) into Accumulator
+; A=20 X=FF Y=01 SP=FF
 sta $2006		            ; Store Accumulator into $2006
 lda #$00		            ; Load 0 ($00) into Accumulator
+; A=00 X=FF Y=01 SP=FF
 sta $2006		            ; Store Accumulator into $2006
 lda #$00		            ; Load 0 ($00) into Accumulator
+; A=00 X=FF Y=01 SP=FF
 ldy #$00		            ; Load 0 ($00) into Y register
+; A=00 X=FF Y=00 SP=FF
 ldx #$03		            ; Load 3 ($03) into X register
+; A=00 X=00 Y=00 SP=FF
 sta $2007		            ; Store Accumulator into $8000
 LOOP:
 dey				            ; Decrement Y register
+; A=00 X=00 Y=FF SP=FF
 bne LOOP		            ; Branch if not equal to LOOP
 dex				            ; Decrement X register
+; A=00 X=FF Y=FF SP=FF
 ldx #$81		            ; Load 0 ($00) into X register
 ldy #$76		            ; Load 0 ($00) into Y register
 jsr $80c1
