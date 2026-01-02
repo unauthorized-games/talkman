@@ -298,7 +298,20 @@ namespace CDZ {
     u8 portraitsSeiyaShiryu[4096] @ 0x33D010;
     u8 seiyaSpecialCHR[8192] @ 0x33E010;
     u8 debugFont2[256] @ 0x35DE10;
-    u8 preGameGraphics[4096] @ 0x37E010;
+    u8 selector[16] @ 0x37EC00;
+    struct OptionsFont {
+        u8 initialLetters[144];
+        u8 halfSeparator[16];
+        u8 optionsLetter[16];
+        u8 separator[16];
+        u8 no[32];
+    };
+    struct PreGameGraphics {
+        OptionsFont optionsFont @ 0x37EC10;
+        u8 abelFace[240] @ 0x37ED20;
+        u8 fightLetters[288] @ 0x37EE50;
+    };
+    PreGameGraphics preGameGraphics @ 0x37E010;
 }
 
 namespace TheDragon {
