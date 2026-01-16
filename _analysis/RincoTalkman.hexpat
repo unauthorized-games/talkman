@@ -173,7 +173,6 @@ namespace CDZ {
         u8 debugSymbolsQuarterCopy[47] @ 0x50000+0x10000*std::core::array_index()+0xDFE1;
         u8 debugSymbolsQuarterCopy2[77] @ 0x50000+0x10000*std::core::array_index()+0xE513;
         u8 unknownSubroutine[21] @ 0x50000+0x10000*std::core::array_index()+0xE787;
-        u8 unknownSubroutineAlpha[21] @ 0x50000+0x10000*std::core::array_index()+0xFFE0;
         Vectors vectors @ 0x50000+0x10000*std::core::array_index()+0x1000A;
     };
     RepeatedStructures50000h repeatedStructures50000h[3] @ 0x50000;
@@ -196,7 +195,7 @@ namespace CDZ {
     u8 sndSourceCodeQuarterCopy3[217] @ 0x53F37;
     u8 assemblyInstruction[32] @ 0x55FF0;
     u8 arabicNarrationShortCopy2[124] @ 0x55714;
-    u8 resetHandler[318] @ 0x5E560;
+    u8 main[318] @ 0x5E560;
     u8 nmiHandler[233] @ 0x5E69E;
     u8 copyrightYear[21] @ 0x60696;
     CopyrightLogo copyrightLogo @ 0x606B1;
@@ -214,6 +213,7 @@ namespace CDZ {
     u8 arabicNarration[1824] @ 0x71320;
     u8 arabicNarrationHalfCopy[1503] @ 0x73461;
     u8 arabicNarrationShortCopy[124] @ 0x75714;
+    u8 resetHandler[21] @ 0x7FFE0;
     u8 seiyaDescription[47168] @ 0x80010;
     u8 shiryuDescription[43296] @ 0x8B860;
     u8 hyogaDescription[37007] @ 0x96180;
