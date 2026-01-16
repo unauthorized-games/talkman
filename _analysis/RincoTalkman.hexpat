@@ -72,7 +72,7 @@ namespace CDZ {
             char symbol[8];
         }
         if ($<0xCCC6) char symbol[8];
-        else if ($!=0xCCF9&&$!=0xCD9F&&$!=0xCEC6&&$!=0xCF60&&$!=0xD010&&$!=0xE790) std::string::SizedString<u8> symbol;
+        else if ($!=0xCCF9&&$!=0xCD9F&&$!=0xCEC6&&$!=0xCF60&&$!=0xD010&&$!=0xE796) std::string::SizedString<u8> symbol;
     };
     u8 atlasSpecialArabic[3246] @ 0xC010;
     DebugSymbol debugSymbols[while($<0xD010)] @ 0xCCBE;
