@@ -19,7 +19,7 @@ TO-DO:
 <br>
 PORTUGUÊS:<br>
 Esse repositório será usado para desmontar a ROM integrada do Rinco Talkman, um famiclone de 1997 capaz de produzir samples de áudio de maior qualidade que o 2A03 (processador de código e áudio) do NES pode aguentar.
-Mais informações [aqui](https://nesdev.org/wiki/NES_2.0_Mapper_594)  (em inglês).
+Mais informações [aqui](https://nesdev.org/wiki/NES_2.0_Mapper_594).
 
 A ROM vem com três jogos:
 * *Os Cavaleiros do Zodíaco*: Nunca-antes-visto jogo de luta por Hummer Team do mesmo ano baseado na franquia de mesmo nome
@@ -36,7 +36,7 @@ A FAZER:
 <br>
 <br>
 ESPAÑOL:<br>
-Este repositório será utilizado para desensamblar la ROM integrada del Rinco Talkman, un famiclone de 1997 capaz de producir samples de audio de mayor calidad que el 2A03 (procesador de código y audio) del NES puede aguantar. Más informaciones [aquí](https://www.nesdev.org/wiki/NES_2.0_Mapper_594) (en inglés).
+Este repositório será utilizado para desensamblar la ROM integrada del Rinco Talkman, un famiclone de 1997 capaz de producir samples de audio de mayor calidad que el 2A03 (procesador de código y audio) del NES puede aguantar. Más informaciones [aquí](https://www.nesdev.org/wiki/NES_2.0_Mapper_594).
 
 La ROM viene con trés juegos:
 * *Os Cavaleiros do Zodíaco*: Nunca-antes-visto juego de lucha por Hummer Team del mismo año basado en Los Caballeros del Zodíaco
