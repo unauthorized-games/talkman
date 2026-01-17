@@ -14,6 +14,10 @@ The other two games are separate and bundled together with the CDZ game.
 Currently the end goal of this project is to fix the English version of the game, unused inside the ROM.
 TO-DO:
 * Fix English voicelines for end of fight being swapped for individual characters themselves, and ones for techniques being swapped between two characters (last one is due to the character order being swapped internally for the technique ID)
+
+Notes:
+* For CDZ, anything past $080000 is more Talkman audio, does not need to be inspected
+* The Dragon's data starts at $180010.
 <br>
 <br>
 <br>
