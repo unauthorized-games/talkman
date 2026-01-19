@@ -17,6 +17,7 @@ TO-DO:
 * Fix English voicelines for end of fight being swapped for individual characters themselves, and ones for techniques being swapped between two characters (last one is due to the character order being swapped internally for the technique ID)
 
 Notes:
+* IRQ happens first, then NMI, then the Reset Handler.
 * For CDZ, anything past $080000 is more Talkman audio, does not need to be inspected
 * The Dragon's data starts at $180010.
 <br>
@@ -40,6 +41,7 @@ A FAZER:
 * Consertar vozes em inglês para fim de batalha tendo sido trocadas para os próprios personagens individuais, e as para técnicas entre dois personagens (este último é devido a ordem de personagens estar trocada internamente para o ID de técnicas)
 
 Notas:
+* IRQ acontece primeiro, depois o NMI, e então o Gerenciador de Reinício.
 * Para CDZ, tudo depois de $080000 é mais áudio Talkman, não precisa ser inspecionado
 * Dados para The Dragon começam em $180010.
 <br>
@@ -64,5 +66,6 @@ PENDIENTE:
 * Consertar voces en inglés para fin de batalla tendo sido trocadas para los próprios personajes individuales, y para las tecnicas entre dos personajes (este último es porque la orden de los personajes está trocada internamiente para el ID de tecnicas)
 
 Notas:
+* IRQ acontece primero, entonces el NMI, y entonces el Reset Handler.
 * Para CDZ, todo despues de $080000 es más audio Talkman, no necesita ser inspecionado
 * Datos para The Dragon comienzan en $180010.

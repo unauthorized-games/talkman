@@ -5601,9 +5601,9 @@
 	PHA					; Push accumulator on stack
 	TYA					; Transfer Y to accumulator
 	PHA					; Push accumulator on stack
-	LDA #$00
-	STA OamAddr_2003
-	LDA PpuStatus_2002
+	LDA #$00			; Load 0 ($00) into Accumulator
+	STA OamAddr_2003	; 
+	LDA PpuStatus_2002	; 
 	AND #$20
 	STA $0668
 	LDA #$02
@@ -5614,7 +5614,7 @@
 	CMP #$04
 	BNE $E6B4
 	JSR $C000
-	NOP
+	NOP					 ; No-operation; useless instruction
 	LDA $0088
 	BNE $E6CA
 	LDA $44
@@ -5638,7 +5638,7 @@
 	LDA $0416
 	STA $0418
 	JSR $E872
-	NOP
+	NOP					 ; No-operation; useless instruction
 	LDA #$80
 	STA $8000
 	LDA $00A9
@@ -5672,7 +5672,7 @@
 	STX $8001
 	LDA #$83
 	STA $8000
-	INX
+	INX					; Increment X
 	STX $8001
 	LDA #$84
 	STA $8000
@@ -5685,7 +5685,7 @@
 	JSR $E81D
 	LDA $0088
 	BNE $E76A
-	INC $25
+	INC $25				; Increment $0025
 	LDA #$01
 	STA $0082
 	LDA $0087
@@ -5868,8 +5868,8 @@
 	TYA			; Transfer Y to accumulator
 	PHA			; Push accumulator on stack
 	JSR $0423 (JMP JUMPED)	; Jump to jump instruction in NES RAM
-	LDA $0087	; Load $87 into A
-	STA $8000	; Store $8000 into accumulator
+	LDA $0087	; Load $87 into Accumulator
+	STA $8000	; Store $8000 into Accumulator
 	PLA			; Pull accumulator from stack
 	TAY			; Transfer accumulator to Y
 	PLA			; Pull accumulator from stack
@@ -6026,7 +6026,7 @@ JUMPED:
 	STA $8000
 	STX $8001
 	INC $0435
-	RTS
+	RTS			; Return to previous code
 ;------------------------
 	LDA #$80
 	STA $8000
