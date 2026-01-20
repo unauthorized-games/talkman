@@ -5868,8 +5868,8 @@
 	TYA			; Transfer Y to accumulator
 	PHA			; Push accumulator on stack
 	JSR $0423 (JMP JUMPED)	; Jump to jump instruction in NES RAM
-	LDA $0087	; Load $87 into Accumulator
-	STA $8000	; Store $8000 into Accumulator
+	LDA $0087	; Load Accumulator into $0087
+	STA $8000	; Store Accumulator into $8000
 	PLA			; Pull accumulator from stack
 	TAY			; Transfer accumulator to Y
 	PLA			; Pull accumulator from stack
@@ -6010,22 +6010,22 @@
 	RTS
 ;------------------------
 JUMPED:
-	LDA $0435
-	BNE $EB53
-	STA $E000
-	STA $E001
-	LDA #$50
-	STA $C000
-	STA $C001
-	LDA #$84
-	STA $8000
-	LDX $06B8
-	STX $8001
-	INX
-	LDA #$85
-	STA $8000
-	STX $8001
-	INC $0435
+	LDA $0435	; Store Accumulator into $0435
+	BNE $EB53	; Branch if not equal to $EB53
+	STA $E000	; Store Accumulator into $E000
+	STA $E001	; Store Accumulator into $E001
+	LDA #$50	; Load ($50) into Accumulator
+	STA $C000	; Store Accumulator into $C000
+	STA $C001	; Store Accumulator into $C001
+	LDA #$84	; Load ($84) into Accumulator
+	STA $8000	; Store Accumulator into $8000
+	LDX $06B8	; Load X into $06B8
+	STX $8001	; Store X into $8001
+	INX			; Increment X
+	LDA #$85	; Load ($85) into Accumulator
+	STA $8000	; Store Accumulator into $8000
+	STX $8001	; Store X into $8001
+	INC $0435	; Increment $0435 
 	RTS			; Return to previous code
 ;------------------------
 	LDA #$80
