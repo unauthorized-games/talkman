@@ -5862,11 +5862,17 @@
 ;------------------------
 ;-----------irq----------
 	PHP			; Push processor status on stack
+	; A=00 X=00 Y=00 czidbvn
 	PHA			; Push accumulator on stack
+	; A=00 X=00 Y=00 czidbvn
 	TXA			; Transfer X to accumulator
+	; A=00 X=00 Y=00 czidbvn
 	PHA			; Push accumulator on stack
+	; A=00 X=00 Y=00 czidbvn
 	TYA			; Transfer Y to accumulator
+	; A=00 X=00 Y=00 czidbvn
 	PHA			; Push accumulator on stack
+	; A=00 X=00 Y=00 czidbvn
 	JSR $0423 (JMP JUMPED)	; Jump to jump instruction in NES RAM
 	LDA $0087	; Load Accumulator into $0087
 	STA $8000	; Store Accumulator into $8000
